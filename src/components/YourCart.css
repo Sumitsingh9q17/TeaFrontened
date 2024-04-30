@@ -1,0 +1,374 @@
+/* Container styles */
+.your-cart-content {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom in and zoom out effect on buttons and item images */
+button,
+.cart-item img {
+    transition: transform 0.3s ease;
+}
+
+button:hover,
+.cart-item img:hover {
+    transform: scale(1.05);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffc107;
+}
+
+/* Content styles */
+.cart-items-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.cart-item:hover {
+    background-color: #f9f9f9;
+}
+
+.cart-item::before,
+.cart-item::after {
+    transition: opacity 0.3s ease;
+}
+
+.cart-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.cart-item:hover::before {
+    opacity: 1;
+}
+
+.cart-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6600, transparent);
+    z-index: 1;
+    transform: translateY(-5px);
+}
+
+.item-image,
+.quantity-input {
+    transition: transform 0.3s ease;
+}
+
+.item-image:hover,
+.quantity-input:focus {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+    position: relative;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.quantity-label {
+    margin-right: 10px;
+}
+
+.item-price {
+    margin-bottom: 10px;
+}
+
+.item-actions button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.item-actions button:hover {
+    background-color: #0056b3;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.total-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Shipping Information Styles */
+.shipping-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shipping-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.shipping-info input {
+    display: block;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.shipping-info input:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+.shipping-info button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.shipping-info button:hover {
+    background-color: #e65c00;
+}
+
+/* Additional Styles */
+
+/* Style for Clear Cart button */
+.your-cart-content button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.your-cart-content button:hover {
+    background-color: #c82333;
+}
+
+/* Ripple effect for checkout buttons */
+.checkout-btn::after,
+.continue-shopping-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 5px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.checkout-btn:hover::after,
+.continue-shopping-btn:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Border animation for cart items */
+.cart-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6600, transparent);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover::after {
+    transform: translateY(-5px);
+}
+
+/* Order Summary */
+.order-summary {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-summary h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.order-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order-summary li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-summary .total-price {
+    font-weight: bold;
+}
+
+.order-summary .total-price span {
+    color: #ff6600;
+}
+
+/* Discount Code */
+.discount-code {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.discount-code input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.discount-code input:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+.discount-code button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.discount-code button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Effects */
+
+/* Fade-in Effect for Cart Items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Effect on Cart Summary Icons */
+.cart-summary i:hover {
+    transform: rotate(360deg);
+}
+
+/* Animated Checkmark on Successful Order */
+.checkmark {
+    stroke-dasharray: 68;
+    stroke-dashoffset: 68;
+    animation: draw 0.6s ease-in-out forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Pulse Animation for New Items Added to Cart */
+.new-item {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}

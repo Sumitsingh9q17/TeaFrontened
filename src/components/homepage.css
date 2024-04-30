@@ -1,0 +1,323 @@
+/* homepage.css */
+
+/* Featured Beverages */
+.featured-beverages {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Product Card */
+.product-card {
+    width: calc(30% - 20px); /* Adjust the width to fit three cards in a row */
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-card .product-details {
+    padding: 20px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.product-card .product-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #8D6E63;
+}
+
+/* Quotes */
+.quotes {
+    padding: 40px 20px; /* Add more padding for better spacing */
+    background-color: #f8f8f8; /* Set the background color */
+    border-radius: 20px; /* Add border radius for rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin: 20px; /* Add margin to create space around the quotes section */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.quotes:hover {
+    transform: translateY(-5px); /* Apply a slight upward translation on hover */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.quotes h2 {
+    font-size: 2em; /* Increase font size for the heading */
+    color: #333; /* Set text color */
+    margin-bottom: 30px; /* Add more margin at the bottom of the heading */
+    text-align: center; /* Center-align the heading */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.quotes p {
+    font-size: 1.2em; /* Set font size for the quotes */
+    color: #555; /* Set text color */
+    margin-bottom: 25px; /* Add more margin at the bottom of each quote */
+    line-height: 1.6; /* Adjust line height for better readability */
+    text-align: center; /* Center-align the text */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.quotes p:first-of-type {
+    font-style: italic; /* Apply italic style to the first paragraph */
+}
+
+/* Quotation marks */
+.quotes blockquote {
+    position: relative;
+}
+
+.quotes blockquote:before {
+    content: '\201C'; /* Unicode for left double quotation mark */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 4em;
+    color: #8D6E63; /* Set color for quotation marks */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.quotes blockquote:after {
+    content: '\201D'; /* Unicode for right double quotation mark */
+    font-size: 4em;
+    color: #8D6E63; /* Set color for quotation marks */
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+
+
+
+/* Testimonials */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 20px; /* Curved borders */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.testimonial-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Rounded image */
+}
+/* Events */
+.events {
+    background-color: #f8f8f8; /* Background color */
+    padding: 40px 20px;
+}
+
+.events h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Event List */
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+/* Events */
+.events {
+    background-color: #f8f8f8; /* Background color */
+    padding: 40px 20px;
+    border-radius: 20px; /* Add border radius for a stylish curved border */
+}
+
+.events h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the heading */
+}
+
+/* Event List */
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px; /* Add some padding to the event list */
+}
+
+/* Event Card */
+.event {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Additional Styling for Curved Borders */
+.event:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; /* Match the background color of the event card */
+}
+/* Promotions */
+.promotions {
+    background-color: #f8f8f8; /* Background color */
+    padding: 40px 20px;
+    border-radius: 20px; /* Add border radius for a stylish curved border */
+}
+
+.promotions h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the heading */
+}
+
+/* Promotion Cards */
+.promotion-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px; /* Add some padding to the promotion cards */
+}
+
+/* Promotion Card */
+.promotion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Set position to relative for positioning the image */
+}
+
+.promotion-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.promotion-card p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Promotions */
+.promotions {
+    background-color: #f8f8f8; /* Background color */
+    padding: 40px 20px;
+    border-radius: 20px; /* Add border radius for a stylish curved border */
+}
+
+.promotions h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the heading */
+}
+
+/* Promotion Cards */
+.promotion-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px; /* Add some padding to the promotion cards */
+}
+
+/* Promotion Card */
+.promotion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promotion-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.promotion-card p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Additional Styling for Curved Borders */
+.promotion-card:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; /* Match the background color of the promotion card */
+}
+
+/* Promotion Image */
+.promotion-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+}
